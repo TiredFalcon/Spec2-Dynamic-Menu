@@ -58,5 +58,5 @@ ImdbFilmPresenter >> setModel: anImdbFilm [
 	menuBar := newMenuBar.
 	
 	self buildWithSpec.
-	self inspect.
+	
 ]
