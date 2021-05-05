@@ -36,11 +36,11 @@ ImdbFilmPresenter >> menuBarFor: anImdbFilm [
 	
 	aBar title: anImdbFilm title.
 	aBar addItem: [ :item | item
-		name: 'Inspect';
+		name: 'Inspect ' , anImdbFilm title;
 		action: [ anImdbFilm inspect ]. ].
 	anImdbFilm isAvailableOnline ifTrue: [
 		aBar addItem: [ :item | item
-			name: 'See online';
+			name: 'Search online for ', anImdbFilm title;
 			action: [ WebBrowser openOn: 'https://google.com?q=' , anImdbFilm title ]. ]. ].
 	
 	^ aBar.
